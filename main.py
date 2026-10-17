@@ -18,7 +18,7 @@ date = f"{int(day)}/{int(month)}"
 
 # Template Paths
 templates = ["letter_templates/letter_1.txt",
-             "letter_template/letter_2.txt",
+             "letter_templates/letter_2.txt",
              "letter_templates/letter_3.txt"]
 
 # Get birthday CSV data
