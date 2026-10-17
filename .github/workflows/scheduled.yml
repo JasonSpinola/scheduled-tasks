@@ -37,6 +37,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Test SMTP connectivity
+        run: nc -vz smtp.mailgun.org 587
+
       - name: Run script
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
