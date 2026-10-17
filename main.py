@@ -1,7 +1,7 @@
-from datetime import datetime
-import pandas
-import random
 import smtplib
+import datetime as dt
+import pandas as pd
+from random import choice
 import os
 
 # import os and use it to get the Github repository secrets
