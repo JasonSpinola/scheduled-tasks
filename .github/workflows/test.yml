@@ -23,6 +23,7 @@ jobs:
 
       - name: Check secrets are configured
         env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
         run: |
