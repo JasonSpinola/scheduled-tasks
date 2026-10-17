@@ -42,10 +42,10 @@ for person in range(num_of_checks):
         new_email = template_str.replace("[NAME]", name)
         too_address = birthday_dict["Email"][person]
 
-        with smtplib.SMTP(host=EMAIL_HOST, timeout=30) as connection:
+        with smtplib.SMTP(host=MY_EMAIL_HOST, timeout=30) as connection:
             connection.starttls()
-            connection.login(user=EMAIL_ADDRESS, password=EMAIL_PASS)
+            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(
-                from_addr=EMAIL_ADDRESS,
+                from_addr=MY_EMAIL,
                 to_addrs=too_address,
                 msg=f"Subject: Happy Birthday!\n\n{new_email}")
