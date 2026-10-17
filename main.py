@@ -42,8 +42,8 @@ for person in range(num_of_checks):
         new_email = template_str.replace("[NAME]", name)
         too_address = birthday_dict["Email"][person]
 
-        with smtplib.SMTP_SSL(host=MY_EMAIL_HOST, timeout=30, port=465) as connection:
-            # connection.starttls()
+        with smtplib.SMTP_SSL(host=MY_EMAIL_HOST, timeout=30, port=587) as connection:
+            connection.starttls()
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(
                 from_addr=MY_EMAIL,
