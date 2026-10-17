@@ -22,7 +22,7 @@ templates = ["letter_templates/letter_1.txt",
              "letter_templates/letter_3.txt"]
 
 # Get birthday CSV data
-birthday_data = pd.read_csv("birthday_data.csv")
+birthday_data = pd.read_csv("birthdays.csv")
 birthday_dict = birthday_data.to_dict()
 num_of_checks = len(birthday_dict["Name"])
 
